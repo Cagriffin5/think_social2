@@ -86,6 +86,7 @@ if( isset($_POST['did_register']) ){
             if( $result->rowCount() > 0  ){
                 $feedback = 'Success!';
                 $feedback_class = 'success';
+                header( "Location:login.php" );
             }else{
                 $feedback = 'Database Error';
                 $feedback_class = 'error'; 

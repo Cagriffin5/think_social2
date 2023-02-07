@@ -1,4 +1,7 @@
-
+<?php 
+//check for a logged in user
+$logged_in_user = check_login();
+ ?>
 <!DOCTYPE html>
 
 <head>

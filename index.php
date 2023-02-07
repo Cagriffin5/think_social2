@@ -1,5 +1,6 @@
 <?php 
 require('config.php');
+require_once('includes/functions.php');
 require('includes/header.php'); 
 ?>
 
