@@ -275,10 +275,12 @@ function category_dropdown(){
         echo '<select>';
     }
 }
-function show_post_image( $unique, $size = 'medium', $alt = 'post image' ){
-    $url = $unique;
-    if( ! strpos( $unique, 'http' ) ){
-    $url = "uploads/$unique" . '_' .  "$size.jpg";
-    }
-    echo "<img src='$url' alt'$alt' class='post-image is-$size' >";
+function show_post_image( $unique, $size = 'medium', $alt = 'post image'  ){
+    $url = "uploads/$unique" . '_' . "$size.jpg";
+   //if the "unique" is not an absolute path, format it. 
+   //this makes our old placeholder images still work. Not really necessary but nice for this class. 
+   if( strpos( $unique, 'http' ) === 0 ){
+       $url = $unique;
+   }
+   echo "<img src='$url' alt='$alt' class='post-image is-$size'>";
 }

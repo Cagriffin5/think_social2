@@ -37,7 +37,7 @@ require('includes/header.php');
 
 		<label>
 			<input type="checkbox" name="policy" value="1" >
-			<span class="checkable">I agree to the <a href="#" target="_blank">terms of use.</a></span>
+			<span class="checkable">I agree to the <a href="#" target="_blank">terms of service.</a></span>
 		</label>
 
 		<input type="submit" value="Sign Up">

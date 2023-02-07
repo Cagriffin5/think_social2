@@ -23,7 +23,7 @@ require('includes/header.php');
         <section class="two flex">
 
         <div class="important-form ">
-		<!-- <h1>Log In</h1>  -->
+		<h1>Log In</h1> 
         <?php show_feedback($feedback, array(), $feedback_class); ?>
 		<form class="flex" method="post" action="login.php">
 			<label>Username</label>

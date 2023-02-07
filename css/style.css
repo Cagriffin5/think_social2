@@ -27,6 +27,8 @@ main {
     align-items: center;
 }
 
+
+
 .flex {
     display: flex;
 }
@@ -94,7 +96,8 @@ nav.topnav ul.global {
     right: 0;
     visibility: hidden;
 }
-nav.topnav{
+
+nav.topnav {
     display: flex;
     flex-direction: row;
 }
@@ -139,7 +142,29 @@ nav.topnav ul.global.burger-off {
     visibility: hidden;
 }
 
+.posts-container {
 
+    flex-direction: row;
+}
+
+.card {
+    margin-right: 40px;
+}
+
+.full {
+    height: 200px;
+    width: 400px;
+}
+
+.post {
+    height: 200px;
+    width: 200px;
+}
+
+.content {
+    display: flex;
+    padding: 50px;
+}
 
 div.fnav {
     flex-direction: column;
@@ -204,6 +229,10 @@ form {
     align-items: center;
 }
 
+.important-form p {
+    border: none;
+}
+
 .important-form h1 {
     color: black;
     text-align: left;
@@ -211,7 +240,7 @@ form {
 
 label {
     display: block;
-    margin: .7em 0 .2em;
+    margin-bottom: 10px;
 }
 
 form {
@@ -221,7 +250,7 @@ form {
 
 form input {
     margin-bottom: 10px;
-    width: auto;
+    width: 300px;
 }
 
 form input[type=submit] {
@@ -232,6 +261,17 @@ form input[type=submit] {
 
 .trending img {
     margin: 0 20px 0 20px;
+}
+
+p {
+    line-height: 2rem;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.post-excerpt {
+    border: none;
+    padding: 0px;
 }
 
 footer {

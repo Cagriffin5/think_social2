@@ -18,9 +18,9 @@
       <nav class="topnav">
         <a href="javascript:;" class="menu"><i class="fa-solid fa-bars"></i></a>
         <ul class="global flex">
-          <li class="nportfolio"><a href="/login.php">Log In</a></li>
-          <li class="nservices"><a href="/register.php">Register</a></li>
-          <li class="nstaff"><a href="/tos.php">Terms of Service</a></li>
+          <li class="nportfolio"><a href="login.php">Log In</a></li>
+          <li class="nservices"><a href="register.php">Register</a></li>
+          <li class="nstaff"><a href=""></a></li>
           <li class="narticles"><a href=""></a></li>
           <li class="ncontact"><a href=""></a></li>
         </ul>

@@ -7,8 +7,8 @@
         <ul class="global flex">
           <li class="nportfolio"><a href="pages/portfolio.html"></a></li>
           <li class="nservices"><a href="pages/services.html"></a></li>
-          <li class="nstaff"><a href="pages/staff.html"></a></li>
-          <li class="narticles"><a href="/404.php">404</a></li>
+          <li class="nstaff"><a href="tos.php">Terms of Service</a></li>
+          <li class="narticles"><a href="404.php">404</a></li>
           <li class="ncontact"><a href=""></a></li>
         </ul>
       </nav>
