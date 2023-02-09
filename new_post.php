@@ -35,5 +35,5 @@ require('includes/parse-upload.php');?>
 });  
         </script>
 		<?php 
-		include('includes/sidebar.php');
+		
 		include('includes/footer.php');

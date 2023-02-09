@@ -144,11 +144,13 @@ nav.topnav ul.global.burger-off {
 
 .posts-container {
 
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .card {
-    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .full {
@@ -173,12 +175,31 @@ nav.topnav ul.global.burger-off {
     flex-direction: column;
 }
 
+.home .content {
+    align-items: start;
+}
+
+.user {
+    width: 190px;
+}
+
+.user span {
+    justify-content: flex-start;
+}
+
+.likes {
+    margin-top: 30px;
+}
+
 div.fnav {
     flex-direction: column;
     align-items: center;
     justify-content: centerß;
 }
 
+figcaption {
+    text-align: center;
+}
 
 /* Navselected on page */
 .dportfolio li.nportfolio a,
@@ -283,6 +304,68 @@ p {
 
 footer {
     height: 300px;
+}
+
+.post-image-header {
+    position: relative;
+    padding: 0;
+    font-size: 0;
+}
+
+.post-image-header img,
+.post-image-header a {
+    font-size: 0;
+    line-height: 0;
+}
+
+.post-image-header .edit-post-button {
+    font-size: 1rem;
+    line-height: 1.4;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+}
+
+.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0;
+}
+
+.post-info {
+    margin-top: 1em;
+    color: #999;
+}
+
+.draft .card {
+    background-color: #979797;
+    opacity: .7;
+}
+
+.author-profile {
+    text-align: center;
+    z-index: 99;
+}
+
+.site {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.content {
+    width: 100%;
+    max-width: var(--max-content-width);
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    padding: 1em;
 }
 
 

@@ -11,7 +11,7 @@ $logged_in_user = check_login();
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 </head>
-<body>
+<body cless="site">
 <script src="js/background.js" type="text/javascript"></script>
 <script src="js/menu.js" type="text/javascript"></script>
 <div id="gradient">
@@ -23,8 +23,8 @@ $logged_in_user = check_login();
         <ul class="global flex">
           <li class="nportfolio"><a href="login.php">Log In</a></li>
           <li class="nservices"><a href="register.php">Register</a></li>
-          <li class="nstaff"><a href=""></a></li>
-          <li class="narticles"><a href=""></a></li>
+          <li class="nstaff"><a href="new_post.php">New Post</a></li>
+          <li class="narticles"><a href="home.php">Home</a></li>
           <li class="ncontact"><a href=""></a></li>
         </ul>
         <form action="search.php" method="get" class="searchform">

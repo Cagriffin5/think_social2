@@ -84,7 +84,7 @@ if( isset($_POST['did_login'])){
 
 			
 			//redirect to home page
-			header('Location:index.php');
+			header('Location:home.php');
 			}else{
 				//bad password
 				$feedback = 'Incorrect Password';

@@ -1,5 +1,6 @@
 <?php 
 require('config.php');
+require_once('includes/functions.php');
 require('includes/header.php'); 
 ?>
 
@@ -8,7 +9,7 @@ require('includes/header.php');
         <section class="one flex">
 
             <figure>
-                <!-- <img src="images/TSLOGO.png" alt="Think Social"> -->
+                <img src="images/TSLOGO.png" alt="Think Social">
                 <figcaption>404 Error, page not found.</figcaption>
             </figure>
          

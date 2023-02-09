@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2023 at 11:11 AM
+-- Generation Time: Feb 09, 2023 at 11:09 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `think_social`
 --
-CREATE DATABASE IF NOT EXISTS `think_social` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `think_social`;
 
 -- --------------------------------------------------------
 
@@ -30,11 +28,17 @@ USE `think_social`;
 -- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `category_id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`category_id`, `name`) VALUES
+(1, 'Fun');
 
 -- --------------------------------------------------------
 
@@ -42,7 +46,6 @@ CREATE TABLE `categories` (
 -- Table structure for table `comments`
 --
 
-DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
   `user_id` int(11) NOT NULL,
   `comment_id` int(11) NOT NULL,
@@ -58,7 +61,6 @@ CREATE TABLE `comments` (
 -- Table structure for table `likes`
 --
 
-DROP TABLE IF EXISTS `likes`;
 CREATE TABLE `likes` (
   `like_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -72,7 +74,6 @@ CREATE TABLE `likes` (
 -- Table structure for table `posts`
 --
 
-DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
   `post_id` int(11) NOT NULL,
   `user_id` mediumint(9) NOT NULL,
@@ -93,7 +94,9 @@ INSERT INTO `posts` (`post_id`, `user_id`, `image`, `category_id`, `title`, `bod
 (1, 1, '', 0, 'Example Post', 'This post is an Example.', 1, '0000-00-00 00:00:00', 1),
 (2, 1, 'https://picsum.photos/id/237/200/300', 0, 'picsum photo example', 'this is a random image', 1, '2023-02-07 09:08:40', 1),
 (3, 1, '03380dcacef0609a3a3cf4a9f2379e766eac0b3d', 0, '', '', 0, '2023-02-07 10:56:53', 0),
-(4, 1, '874fd8a8d76f8238d28e4c612f1d349ef13f03cd', 0, '', '', 0, '2023-02-07 10:59:39', 0);
+(4, 1, '874fd8a8d76f8238d28e4c612f1d349ef13f03cd', 0, '', '', 0, '2023-02-07 10:59:39', 0),
+(5, 2, '14c712deeb1791f55de38127e172b30b411f9bb2', 1, 'code man', 'im a coder', 1, '2023-02-09 09:16:08', 1),
+(6, 2, '972104d2a58341f84c5f074e87ce1a619af39013', 1, 'Tree of Life', 'This is the Tree of Life', 1, '2023-02-09 09:44:29', 1);
 
 -- --------------------------------------------------------
 
@@ -101,7 +104,6 @@ INSERT INTO `posts` (`post_id`, `user_id`, `image`, `category_id`, `title`, `bod
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
@@ -120,7 +122,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `profile_pic`, `password`, `bio`, `email`, `is_admin`, `join_date`, `access_token`) VALUES
 (1, 'bober', NULL, '$2y$10$arBo1Ya6Mw5lvybESYWwluA0Nvsa7P.o0twTiHQBs1PVVoj.cZfJ2', '', 'bober@bob.com', 0, '2023-02-07', '95413fd0be47dfae96c346503c9dea20cab06eab0281f9f33c716bca1f36'),
-(2, 'Cameron', NULL, '$2y$10$CXVmz9HvXRXih/liPzwmjO.jwPj8s0LaNodETUTsuX.UvqDjsdMCe', '', 'cam@gmail.com', 0, '2023-02-07', NULL),
+(2, 'Cameron', NULL, '$2y$10$CXVmz9HvXRXih/liPzwmjO.jwPj8s0LaNodETUTsuX.UvqDjsdMCe', '', 'cam@gmail.com', 0, '2023-02-07', '2c8e06a02cd8f2f7070fd46be589d710ee61e4bab7ef732bdc517f13d180'),
 (3, 'james', NULL, '$2y$10$.3mKSsvgK0BLps0axtZez.bMJ5ETVx3ntKuHutw1ulwbaaPsjksKC', '', 'james@james.com', 0, '2023-02-07', 'ef4e5a27e306a72204e8d174a65e86d26b85f906fc6332fabfa40a09fd36');
 
 --
@@ -165,7 +167,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `comments`
@@ -183,7 +185,7 @@ ALTER TABLE `likes`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

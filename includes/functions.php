@@ -284,3 +284,53 @@ function show_post_image( $unique, $size = 'medium', $alt = 'post image'  ){
    }
    echo "<img src='$url' alt='$alt' class='post-image is-$size'>";
 }
+
+/**
+ * Count all the likes on a post
+ * @param  int $post_id 
+ * @return int 
+ */
+function count_likes( $post_id ){
+    global $DB;
+    $result = $DB->prepare( "SELECT COUNT(*) AS total_likes
+        FROM likes
+        WHERE post_id = ?" );
+    $result->execute( array($post_id) );
+    if($result->rowCount() >= 1){
+        $row = $result->fetch();
+        $total = $row['total_likes'];
+
+        return $total;
+    }
+}
+/**
+ * Interface for "like" button and count
+ * works on any post
+ */
+
+function like_interface( $post_id ){
+    global $DB;
+    global $logged_in_user;
+    //is the viewer logged in?
+    if($logged_in_user){
+        //does the user like this post?
+        $result = $DB->prepare('SELECT * FROM likes
+            WHERE user_id = ?
+            AND post_id = ? 
+            LIMIT 1');
+        $result->execute( array( $logged_in_user['user_id'], $post_id ) );
+        if( $result->rowCount() ){
+            $class = 'you-like';
+        }else{
+            $class = 'not-liked';
+        }
+    }//end if logged in
+    ?>
+    <span class="like-interface">
+        <span class="<?php echo $class; ?>">
+            <span class="heart-button" data-postid="<?php echo $post_id; ?>">❤</span>
+            <?php echo count_likes( $post_id ); ?>
+        </span>
+    </span>
+    <?php
+}
