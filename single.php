@@ -3,7 +3,6 @@ require_once('config.php');
 require_once('includes/functions.php');
 
 
-
 //which post are we trying to show and is it valid. 
 $post_id = filter_var ($_GET['post_id'], FILTER_SANITIZE_NUMBER_INT );
 //make sure we get a posotive integer
@@ -71,5 +70,5 @@ require('includes/parse-comment.php');?>
     }
     ?>
 </main>
-<?php 	
+<?php 
 include('includes/footer.php');      

@@ -125,6 +125,11 @@ ul.global li a {
 
 }
 
+label {
+    display: block;
+    margin: .7em 0 .2em;
+}
+
 ul.global li {
     list-style: none;
 }
@@ -143,14 +148,16 @@ nav.topnav ul.global.burger-off {
 }
 
 .posts-container {
-
+    height: 100%;
     flex-direction: column;
+    /* flex-wrap: wrap; */
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 10px;
 }
 
 .full {
@@ -161,11 +168,6 @@ nav.topnav ul.global.burger-off {
 .post {
     height: 200px;
     width: 200px;
-}
-
-.content {
-    display: flex;
-    padding: 50px;
 }
 
 .contents {
@@ -184,7 +186,9 @@ nav.topnav ul.global.burger-off {
 }
 
 .user span {
-    justify-content: flex-start;
+    margin-top: 20px;
+    margin-right: 10px;
+
 }
 
 .likes {
@@ -218,12 +222,14 @@ figcaption {
 
 
 .menu {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .menu a {
-    margin-right: 20px;
+    margin-right: 10px;
+    text-decoration: none;
 }
 
 .one {
@@ -306,6 +312,16 @@ footer {
     height: 300px;
 }
 
+.site {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.post-image {
+    margin-right: 10px;
+}
+
 .post-image-header {
     position: relative;
     padding: 0;
@@ -321,8 +337,7 @@ footer {
 .post-image-header .edit-post-button {
     font-size: 1rem;
     line-height: 1.4;
-    position: absolute;
-    top: .5em;
+    /* position: absolute; */
     right: .5em;
 }
 
@@ -349,17 +364,13 @@ footer {
     z-index: 99;
 }
 
-.site {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
+
 
 .content {
     width: 100%;
-    max-width: var(--max-content-width);
     padding: 0 1em;
     margin: 0 auto;
+    display: flex;
 }
 
 .footer {
@@ -368,7 +379,12 @@ footer {
     padding: 1em;
 }
 
+.home .one {
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
 
+}
 
 
 

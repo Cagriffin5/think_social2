@@ -17,8 +17,33 @@ $logged_in_user = check_login();
 <div id="gradient">
  <div class="topbg">
  <header class="flex container">
-      <h1><a href="index.php">.Think Social</a></h1>
-      <nav class="topnav">
+      <h1><a href="home.php">.Think Social</a></h1>
+     
+				<!-- responsive-->
+				<input id="menu-button" type="checkbox" class="show">
+				<label for="menu-button" class="burger pseudo button">&#9776;</label>
+
+				<div class="menu">
+					<?php if( $logged_in_user ){ ?>
+						<a href="#"><?php echo $logged_in_user['username']; ?></a>
+						<a class="button" href="new_post.php">Create Post</a>
+						<a class="button" href="login.php?action=logout">Log Out</a>
+
+					<?php }else{ ?>	
+					<a href="login.php">Log In</a>
+					<a href="register.php">Sign Up</a>
+					<?php } ?>
+					
+					<form action="search.php" method="get" class="searchform">
+						<input type="search" name="phrase" placeholder="Search">
+						<input type="submit" value="search">
+					</form>
+
+				</div>				
+			</nav>
+    </header>
+
+    <!-- <nav class="topnav">
         <a href="javascript:;" class="menu"><i class="fa-solid fa-bars"></i></a>
         <ul class="global flex">
           <li class="nportfolio"><a href="login.php">Log In</a></li>
@@ -31,6 +56,4 @@ $logged_in_user = check_login();
 						<input type="search" name="phrase" placeholder="Search">
 						<input type="submit" value="search">
 					</form>
-      </nav>
-    </header>
-
+      </nav> -->
