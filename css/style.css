@@ -53,7 +53,7 @@ img {
 
 header {
     top: 0;
-    justify-content: space-around;
+    justify-content:space-evenly;
     width: 100%;
     background-color: #00CEF6;
     height: 300px;
@@ -63,11 +63,11 @@ header {
 h1 {
     color: #00CEF6;
     font-family: Unbounded;
+    margin-bottom: 0;
+  
 }
 
-h1 {
-    color: #00CEF6;
-}
+
 
 h1 a,
 h6 a {
@@ -223,20 +223,22 @@ figcaption {
 
 
 
-
 .searchform{
     margin-left: 40px;
+    padding-top: 15px;
 }
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .menu a {
     margin-right: 10px;
     text-decoration: none;
+    /* margin-bottom: 20px; */
 }
 
 .one {
@@ -292,12 +294,14 @@ form {
 form input {
     margin-bottom: 10px;
     width: 300px;
+    border-radius: 15px;
 }
 
 form input[type=submit] {
     position: relative;
     top: -1px;
     background-color: #f26c4f;
+    border-radius: 15px;
 }
 
 .trending img {
@@ -317,6 +321,8 @@ p {
 
 footer {
     height: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .site {
@@ -396,6 +402,11 @@ footer {
 
 
 
+@media screen and (min-width:540px){
+    h1{
+        margin-bottom: 0;
+    }
+}
 
 
 
@@ -430,8 +441,15 @@ footer {
     .menu {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: row;
     }
-    
+    .menu a {
+        margin-right: 0;
+        text-decoration: none;
+        margin-bottom: 0;
+    }
+    h1{
+        margin-top: 0;
+ 
 }

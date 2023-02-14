@@ -5,11 +5,9 @@
       <h6><a href=index.php>.Think Social</a></h6>
       <nav>
         <ul class="global flex">
-          <li class="nportfolio"><a href="pages/portfolio.html"></a></li>
-          <li class="nservices"><a href="pages/services.html"></a></li>
-          <li class="nstaff"><a href="tos.php">Terms of Service</a></li>
-          <li class="narticles"><a href="404.php">404</a></li>
-          <li class="ncontact"><a href=""></a></li>
+          <li><a href="tos.php">Terms of Service</a></li>
+          <li><a href="404.php">404</a></li>
+          
         </ul>
       </nav>
     </div>
