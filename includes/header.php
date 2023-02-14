@@ -20,8 +20,8 @@ $logged_in_user = check_login();
       <h1><a href="home.php">.Think Social</a></h1>
      
 				<!-- responsive-->
-				<input id="menu-button" type="checkbox" class="show">
-				<label for="menu-button" class="burger pseudo button">&#9776;</label>
+				<!-- <input id="menu-button" type="checkbox" class="show">
+				<label for="menu-button" class="burger pseudo button">&#9776;</label> -->
 
 				<div class="menu">
 					<?php if( $logged_in_user ){ ?>
@@ -42,6 +42,7 @@ $logged_in_user = check_login();
 				</div>				
 			</nav>
     </header>
+	
 
     <!-- <nav class="topnav">
         <a href="javascript:;" class="menu"><i class="fa-solid fa-bars"></i></a>

@@ -56,7 +56,8 @@ header {
     justify-content: space-around;
     width: 100%;
     background-color: #00CEF6;
-    height: 130px;
+    height: 300px;
+    font-size: 1.5rem;
 }
 
 h1 {
@@ -75,7 +76,7 @@ h6 a {
     text-decoration: none;
     font-family: Unbounded;
     font-weight: normal;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 4.25rem;
     background: url(../Images/TSLOGO.png) no-repeat;
 }
@@ -152,6 +153,9 @@ nav.topnav ul.global.burger-off {
     flex-direction: column;
     /* flex-wrap: wrap; */
 }
+.post-container h2{
+    align-self: center;
+}
 
 .card {
     display: flex;
@@ -220,11 +224,14 @@ figcaption {
 
 
 
-
+.searchform{
+    margin-left: 40px;
+}
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .menu a {
@@ -420,5 +427,11 @@ footer {
     ul.global li a {
         line-height: 4rem;
     }
-
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
 }
